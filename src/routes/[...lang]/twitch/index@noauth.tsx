@@ -1,7 +1,7 @@
 import { component$, useClientEffect$, $ } from '@builder.io/qwik'
 import { DocumentHead } from '@builder.io/qwik-city'
 //import queryString from 'query-string'
-import { setCookie } from '~/utils/set-cookie'
+//import { setCookie } from '~/utils/set-cookie'
 import { $translate as t } from 'qwik-speak'
 
 export default component$(() => {
