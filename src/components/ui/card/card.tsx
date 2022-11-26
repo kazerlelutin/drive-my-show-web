@@ -12,7 +12,7 @@ export const Card = component$(({ type = 'classic', title }: CardProps) => {
   return (
     <div class="card" data-type={type}>
       {title && <div class="title">{title}</div>}
-      <div className="main">
+      <div class="main">
         <Slot />
       </div>
     </div>

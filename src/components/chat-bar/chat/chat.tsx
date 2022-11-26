@@ -6,11 +6,12 @@ import {
   useContext,
   useSignal,
 } from '@builder.io/qwik'
+import styles from './chat.css?inline'
 import tmi from 'tmi.js'
+import { useChatOptions } from '../chat-options.hook'
 import { channelContext } from '~/components/contexts/channel.context'
 import { ChatMsg } from '~/components/ui/chat/chat-msg/chat-msg'
-import { useChatOptions } from '../chat-options.hook'
-import styles from './chat.css?inline'
+import { sessionContext } from '~/components/session/session.context'
 
 export type ChatMessage = {
   tags?: tmi.ChatUserstate
@@ -21,7 +22,7 @@ export type ChatMessage = {
 
 export const Chat = component$(() => {
   useStylesScoped$(styles)
-  const opts = useChatOptions()
+  const { session } = useContext(sessionContext)
   const chan = useContext(channelContext)
   const outputRef = useSignal<Element>()
   const state = useStore<{
@@ -30,10 +31,19 @@ export const Chat = component$(() => {
     messages: [],
   })
 
-  useClientEffect$(({ track }) => {
-    track(() => chan.channel)
-    const client = new tmi.Client(opts)
+  useClientEffect$(async ({ track }) => {
+    track(chan)
+    const client = new tmi.Client({
+      options: { debug: false },
+      identity: {
+        username: session.login,
+        password: `oauth:${session.token}`,
+      },
+      channels: [chan.channel],
+    })
     client.connect()
+
+    console.log(client)
     client.on('message', (_channel, tags, message) => {
       let newMsg = message
       const emotes = tags.emotes ? Object.keys(tags.emotes) : []
@@ -75,6 +85,7 @@ export const Chat = component$(() => {
     })
 
     return () => {
+      console.log('DECO')
       client.disconnect()
     }
   })

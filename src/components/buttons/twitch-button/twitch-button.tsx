@@ -2,8 +2,8 @@ import { component$, useStylesScoped$ } from '@builder.io/qwik'
 import styles from './twitch-button.css?inline'
 import { useLocation } from '@builder.io/qwik-city'
 import queryString from 'query-string'
-import { Button } from '~/components/ui/button/button'
 import { $translate as t } from 'qwik-speak'
+import { Button } from '../../ui/button/button'
 
 export const TwitchButton = component$(() => {
   useStylesScoped$(styles)

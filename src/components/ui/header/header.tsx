@@ -8,10 +8,6 @@ import styles from './header.css?inline'
 export const Header = component$(() => {
   useStylesScoped$(styles)
 
-  //TODO
-  /**
-   * un composant pour changer sa chaine, avec la liste et un bouton pour en ajouter une.
-   */
   return (
     <div class="container">
       <Card>

@@ -1,7 +1,7 @@
 import { component$, useClientEffect$ } from '@builder.io/qwik'
 import { DocumentHead, useNavigate } from '@builder.io/qwik-city'
 import { $translate as t } from 'qwik-speak'
-import { setCookie } from '../../../utils/set-cookie'
+import { setCookie } from '~/utils/set-cookie'
 
 export default component$(() => {
   const nav = useNavigate()

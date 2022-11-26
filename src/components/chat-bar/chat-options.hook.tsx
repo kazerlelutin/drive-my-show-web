@@ -6,7 +6,7 @@ export const useChatOptions = () => {
   const chan = useContext(channelContext)
   const { session } = useContext(sessionContext)
   const state = useStore<{
-    opts: {}
+    opts: { channels: string[]; options: Object; identity: Object }
   }>({
     opts: {
       options: { debug: false },
@@ -14,7 +14,7 @@ export const useChatOptions = () => {
         username: session.login,
         password: `oauth:${session.token}`,
       },
-      channels: [chan.channel, 'faith', 'melina'],
+      channels: [chan.channel],
     },
   })
 

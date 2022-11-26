@@ -1,8 +1,8 @@
 import { component$, useStylesScoped$ } from '@builder.io/qwik'
-import { Card } from '~/components/ui/card/card'
+import { Col } from '~/components/ui/col/col'
 import { Flex } from '~/components/ui/flex/flex'
 import styles from './dashboard.css?inline'
-import { Col } from '../../ui/col/col'
+import { Card } from '../../ui/card/card'
 
 export const Dashboard = component$(() => {
   useStylesScoped$(styles)

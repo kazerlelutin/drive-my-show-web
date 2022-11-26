@@ -1,21 +1,20 @@
 import { component$, useStyles$ } from '@builder.io/qwik'
 import {
-  QwikCity,
+  QwikCityProvider,
   RouterOutlet,
   ServiceWorkerRegister,
 } from '@builder.io/qwik-city'
-import { RouterHead } from './components/router-head/router-head'
-
 import globalStyles from './styles/global.css?inline'
 import { QwikSpeak } from 'qwik-speak'
 import { config, translateFn } from './utils/speak-config'
+import { RouterHead } from './components/router-head/router-head'
 
 export default component$(() => {
   useStyles$(globalStyles)
 
   return (
     <QwikSpeak config={config} translateFn={translateFn}>
-      <QwikCity>
+      <QwikCityProvider>
         <head>
           <meta charSet="utf-8" />
           <link rel="manifest" href="/manifest.json" />
@@ -25,7 +24,7 @@ export default component$(() => {
           <RouterOutlet />
           <ServiceWorkerRegister />
         </body>
-      </QwikCity>
+      </QwikCityProvider>
     </QwikSpeak>
   )
 })

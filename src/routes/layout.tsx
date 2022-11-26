@@ -1,14 +1,14 @@
 import { component$, Resource, Slot, useStylesScoped$ } from '@builder.io/qwik'
-import styles from '../../styles/layout.css?inline'
+import styles from '../styles/layout.css?inline'
 import { RequestHandler, useEndpoint } from '@builder.io/qwik-city'
 import { COOKIE_NAME } from '~/utils/set-cookie'
 import { SessionProvider } from '~/components/session/session.context'
 import { Header } from '~/components/ui/header/header'
-import { GridBox } from '../../components/ui/grid-box/grid-box'
 import { Col } from '~/components/ui/col/col'
 import { Card } from '~/components/ui/card/card'
-import { ChannelProvider } from '../../components/contexts/channel.context'
 import { ChatBar } from '~/components/chat-bar/chat-bar'
+import { ChannelProvider } from '~/components/contexts/channel.context'
+import { GridBox } from '~/components/ui/grid-box/grid-box'
 
 export default component$(() => {
   useStylesScoped$(styles)

@@ -1,5 +1,4 @@
 import { component$ } from '@builder.io/qwik'
-import { DocumentHead } from '@builder.io/qwik-city'
 import { Link } from '@builder.io/qwik-city'
 import { Card } from '~/components/ui/card/card'
 import { Col } from '~/components/ui/col/col'
@@ -164,13 +163,3 @@ export default component$(() => {
     </div>
   )
 })
-
-export const head: DocumentHead = {
-  title: 'Welcome to Qwik',
-  meta: [
-    {
-      name: 'description',
-      content: 'Qwik site description',
-    },
-  ],
-}
