@@ -1,0 +1,13 @@
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dms-gap);
+}
+
+.center {
+  align-items: center;
+}
+
+.reverse {
+  flex-direction: column-reverse;
+}

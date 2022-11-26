@@ -1,0 +1,13 @@
+{
+    "flower": "fleur",
+    "app": {
+        "login_twitch": "Connexion avec Twitch",
+        "twitch_wait": "Vous allez être redirigé",
+        "active_channel": "chaîne active"
+    },
+
+    "home":{
+
+    },
+    "**link**": "** lien ** "
+  }

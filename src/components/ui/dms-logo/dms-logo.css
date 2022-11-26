@@ -1,0 +1,8 @@
+.logo {
+  font-size: 1em;
+}
+
+.logo a {
+  color: var(--dms-text);
+  text-decoration: none;
+}

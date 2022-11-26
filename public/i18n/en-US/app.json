@@ -1,0 +1,12 @@
+{
+
+    "app": {
+      "login_twitch": "Login with Twitch",
+      "twitch_wait": "You will be redirected",
+      "active_channel": "active channel"
+    },
+    "home":{
+
+    },
+    "**link**": "** link ** "
+  }
