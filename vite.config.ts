@@ -14,7 +14,7 @@ export default defineConfig(() => {
         basePath: './',
         assetsPath: 'public/i18n',
         supportedLangs: ['en-US', 'fr-FR'],
-        defaultLang: 'en-US',
+        defaultLang: 'fr-FR',
       }),
     ],
     preview: {

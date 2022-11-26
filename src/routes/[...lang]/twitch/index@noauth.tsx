@@ -9,6 +9,7 @@ export default component$(() => {
 
   useClientEffect$(() => {
     $(() => {
+      console.log('________')
       const tokens: null | { access_token?: string } = queryString.parse(
         document.location.hash.replace('#', '')
       )
