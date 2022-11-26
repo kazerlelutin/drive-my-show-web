@@ -1,5 +1,6 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node";
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 
-export default async function items(_req: VercelRequest, _res: VercelResponse) {
+export default async function items(req: VercelRequest, res: VercelResponse) {
+  console.log(res, res)
   return 'ok'
 }

@@ -1,19 +1,9 @@
-import {
-  component$,
-  useClientEffect$,
-  useStore,
-  useResource$,
-  Resource,
-  useContext,
-} from '@builder.io/qwik'
-import { DocumentHead, useNavigate } from '@builder.io/qwik-city'
+import { component$ } from '@builder.io/qwik'
+import { DocumentHead } from '@builder.io/qwik-city'
 import { Link } from '@builder.io/qwik-city'
-import queryString from 'query-string'
-import { sessionContext } from '~/components/session/session.context'
 import { Card } from '~/components/ui/card/card'
 import { Col } from '~/components/ui/col/col'
 import { Flex } from '~/components/ui/flex/flex'
-import { setCookie } from '~/utils/set-cookie'
 
 export default component$(() => {
   return (
