@@ -58,14 +58,14 @@ export default class S3 {
 
   async findOrCreateBucket(): Promise<string> {
     const Name = this.bucketName
+    const { Buckets } = await this.s3Client.send(new ListBucketsCommand({}))
     try {
-      const { Buckets } = await this.s3Client.send(new ListBucketsCommand({}))
-      const bucketIsExist = Buckets.find((bucket) => bucket.Name === Name)
+      const bucketIsExist = Buckets?.find((bucket) => bucket.Name === Name)
       if (!bucketIsExist) {
         await this.s3Client.send(new CreateBucketCommand({ Bucket: Name }))
       }
     } catch (e) {
-      throw new Error(e)
+      throw new Error()
     }
     return Name
   }
