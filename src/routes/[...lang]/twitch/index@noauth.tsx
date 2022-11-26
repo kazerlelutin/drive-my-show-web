@@ -1,23 +1,21 @@
 import { component$, useClientEffect$ } from '@builder.io/qwik'
-import { DocumentHead } from '@builder.io/qwik-city'
+import { DocumentHead, useNavigate } from '@builder.io/qwik-city'
 import { setCookie } from '~/utils/set-cookie'
 import { $translate as t } from 'qwik-speak'
 
 export default component$(() => {
-  //const nav = useNavigate()
+  const nav = useNavigate()
 
   useClientEffect$(async () => {
     const queryString = (await import('query-string')).default
-    window.location.pathname = '/dashboard'
 
     const tokens: null | { access_token?: string } = queryString.parse(
       document.location.hash.replace('#', '')
     )
+
     if (tokens && tokens?.access_token) {
       setCookie(tokens.access_token)
-
-      //TODO use nav.path when qwik fix context error
-      // nav.path = '/dashboard'
+      nav.path = '/dashboard'
     }
   })
 
