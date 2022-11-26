@@ -1,6 +1,6 @@
 import { component$, useClientEffect$, $ } from '@builder.io/qwik'
 import { DocumentHead } from '@builder.io/qwik-city'
-import queryString from 'query-string'
+//import queryString from 'query-string'
 import { setCookie } from '~/utils/set-cookie'
 import { $translate as t } from 'qwik-speak'
 
@@ -10,6 +10,8 @@ export default component$(() => {
   useClientEffect$(() => {
     $(() => {
       console.log('________')
+      window.location.pathname = '/dashboard'
+      /*
       const tokens: null | { access_token?: string } = queryString.parse(
         document.location.hash.replace('#', '')
       )
@@ -17,9 +19,10 @@ export default component$(() => {
         setCookie(tokens.access_token)
 
         //TODO use nav.path when qwik fix context error
-        window.location.pathname = '/dashboard'
+       
         // nav.path = '/dashboard'
       }
+      */
     })()
   })
 
