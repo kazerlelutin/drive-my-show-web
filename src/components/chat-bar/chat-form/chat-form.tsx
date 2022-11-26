@@ -1,16 +1,31 @@
-import { component$, useStore, useStylesScoped$, $ } from '@builder.io/qwik'
+import {
+  component$,
+  useStore,
+  useStylesScoped$,
+  $,
+  useContext,
+} from '@builder.io/qwik'
 import styles from './chat-form.css?inline'
 import tmi from 'tmi.js'
-import { useChatOptions } from '../chat-options.hook'
 import { Button } from '~/components/ui/button/button'
+import { sessionContext } from '~/components/session/session.context'
+import { channelContext } from '~/components/contexts/channel.context'
 
 export const ChatForm = component$(() => {
   useStylesScoped$(styles)
-  const opts = useChatOptions()
+  const { session } = useContext(sessionContext)
+  const { channel } = useContext(channelContext)
   const state = useStore({ value: '' })
 
   const handleSubmit = $(async () => {
-    const client = new tmi.Client(opts)
+    const client = new tmi.Client({
+      options: { debug: false },
+      identity: {
+        username: session.login,
+        password: `oauth:${session.token}`,
+      },
+      channels: [channel],
+    })
     await client.connect()
     await client.say('kazerll', state.value)
     client.disconnect()

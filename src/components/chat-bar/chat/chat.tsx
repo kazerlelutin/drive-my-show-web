@@ -8,7 +8,6 @@ import {
 } from '@builder.io/qwik'
 import styles from './chat.css?inline'
 import tmi from 'tmi.js'
-import { useChatOptions } from '../chat-options.hook'
 import { channelContext } from '~/components/contexts/channel.context'
 import { ChatMsg } from '~/components/ui/chat/chat-msg/chat-msg'
 import { sessionContext } from '~/components/session/session.context'

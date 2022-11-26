@@ -1,9 +1,4 @@
-import {
-  component$,
-  PropFunction,
-  Slot,
-  useStylesScoped$,
-} from '@builder.io/qwik'
+import { component$, Slot, useStylesScoped$ } from '@builder.io/qwik'
 import { Card } from '../ui/card/card'
 import styles from './fullscreen-modal.css?inline'
 import { useContext } from '@builder.io/qwik'
