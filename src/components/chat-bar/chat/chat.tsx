@@ -42,7 +42,6 @@ export const Chat = component$(() => {
     })
     client.connect()
 
-    console.log(client)
     client.on('message', (_channel, tags, message) => {
       let newMsg = message
       const emotes = tags.emotes ? Object.keys(tags.emotes) : []
@@ -84,7 +83,6 @@ export const Chat = component$(() => {
     })
 
     return () => {
-      console.log('DECO')
       client.disconnect()
     }
   })

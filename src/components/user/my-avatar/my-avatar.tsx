@@ -1,7 +1,7 @@
 import { component$, useStylesScoped$, useContext } from '@builder.io/qwik'
-import { Avatar } from '../ui/avatar/avatar'
+import { Avatar } from '../../ui/avatar/avatar'
 import styles from './my-avatar.css?inline'
-import { sessionContext } from '../session/session.context'
+import { sessionContext } from '../../session/session.context'
 
 export const MyAvatar = component$(() => {
   useStylesScoped$(styles)

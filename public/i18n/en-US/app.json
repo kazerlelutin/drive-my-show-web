@@ -3,7 +3,14 @@
     "app": {
       "login_twitch": "Login with Twitch",
       "twitch_wait": "You will be redirected",
-      "active_channel": "active channel"
+      "active_channel": "active channel",
+      "loading": "Loading...",
+      "my_channels": "My channels",
+      "active": "active",
+      "delete": "delete",
+      "activated":"activated",
+      "send": "send",
+      "name_of_channel": "Name of channel"
     },
     "home":{
 

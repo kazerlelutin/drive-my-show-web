@@ -5,6 +5,8 @@ interface ColProps {
   center?: boolean
   reverse?: boolean
   wrap?: boolean
+  spaceBetween?: boolean
+  smallGap: boolean
 }
 
 export const Flex = component$((props: ColProps) => {

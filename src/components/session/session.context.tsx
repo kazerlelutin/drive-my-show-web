@@ -17,6 +17,10 @@ export type Session = {
   view_count: number
   created_at: string
   token: string
+  token_api: string
+  current_channel: string
+  channel_count: number
+  profile: 'free' | 'premium' | 'all_star'
 }
 export const sessionContext = createContext<{
   session: Session

@@ -4,6 +4,9 @@ import styles from './col.css?inline'
 interface ColProps {
   center?: boolean
   reverse?: boolean
+  smallGap?: boolean
+  left?: boolean
+  right?: boolean
 }
 
 export const Col = component$((props: ColProps) => {

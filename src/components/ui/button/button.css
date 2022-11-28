@@ -4,6 +4,7 @@
   text-transform: uppercase;
   background: none;
   padding: 10px;
+  color: var(--dms-text);
   border-radius: 20px;
   cursor: pointer;
 }

@@ -8,13 +8,15 @@ import {
 
 export const channelContext = createContext<{
   channel: string
+  count: number
 }>('channel')
 
 export const ChannelProvider = component$(
-  ({ defaultValue }: { defaultValue: string }) => {
+  ({ defaultValue }: { defaultValue: { channel: string; count: number } }) => {
     const state = useStore<{
       channel: string
-    }>({ channel: defaultValue })
+      count: number
+    }>({ channel: defaultValue.channel, count: defaultValue.count })
 
     useContextProvider(channelContext, state)
     return (

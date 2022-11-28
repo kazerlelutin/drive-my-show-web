@@ -3,7 +3,14 @@
     "app": {
         "login_twitch": "Connexion avec Twitch",
         "twitch_wait": "Vous allez être redirigé",
-        "active_channel": "chaîne active"
+        "active_channel": "chaîne active",
+        "loading": "Chargement...",
+        "my_channels": "Mes chaînes",
+        "active": "active",
+        "delete": "supprimer",
+        "activated": "activer",
+        "send": "envoyer",
+        "name_of_channel": "Nom de la chaîne"
     },
 
     "home":{
