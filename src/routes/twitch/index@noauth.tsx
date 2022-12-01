@@ -1,11 +1,9 @@
 import { component$, useClientEffect$ } from '@builder.io/qwik'
-import { DocumentHead, useNavigate } from '@builder.io/qwik-city'
+import { DocumentHead } from '@builder.io/qwik-city'
 import { $translate as t } from 'qwik-speak'
 import { setCookie } from '~/utils/set-cookie'
 
 export default component$(() => {
-  const nav = useNavigate()
-
   useClientEffect$(async () => {
     const queryString = (await import('query-string')).default
 
@@ -15,7 +13,7 @@ export default component$(() => {
 
     if (tokens && tokens?.access_token) {
       setCookie(tokens.access_token)
-      nav.path = '/dashboard'
+      window.location.pathname = '/dashboard'
     }
   })
 
