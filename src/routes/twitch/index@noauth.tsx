@@ -13,6 +13,7 @@ export default component$(() => {
 
     if (tokens && tokens?.access_token) {
       setCookie(tokens.access_token)
+      document.location.hash = ''
       window.location.pathname = '/dashboard'
     }
   })
