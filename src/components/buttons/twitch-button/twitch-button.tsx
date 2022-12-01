@@ -19,15 +19,13 @@ export const TwitchButton = component$(() => {
     }
 
   return (
-    <Button variant="twitch">
-      <a
-        class="link"
-        href={`${TWITCH_URL_AUTH}?${queryString.stringify(params, {
-          encode: false,
-        })}`}
-      >
-        {t('app.login_twitch')}
-      </a>
-    </Button>
+    <a
+      class="link"
+      href={`${TWITCH_URL_AUTH}?${queryString.stringify(params, {
+        encode: false,
+      })}`}
+    >
+      <Button variant="twitch">{t('app.login_twitch')}</Button>
+    </a>
   )
 })
