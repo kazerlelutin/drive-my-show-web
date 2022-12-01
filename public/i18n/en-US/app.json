@@ -5,11 +5,13 @@
       "twitch_wait": "You will be redirected",
       "active_channel": "active channel",
       "loading": "Loading...",
+      "LOADING": "Loading...",
       "my_channels": "My channels",
       "active": "active",
       "delete": "delete",
       "activated":"activated",
       "send": "send",
+      "SEND": "send",
       "name_of_channel": "Name of channel"
     },
     "home":{

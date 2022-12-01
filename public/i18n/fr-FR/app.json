@@ -5,11 +5,13 @@
         "twitch_wait": "Vous allez être redirigé",
         "active_channel": "chaîne active",
         "loading": "Chargement...",
+        "LOADING": "Chargement...",
         "my_channels": "Mes chaînes",
         "active": "active",
         "delete": "supprimer",
         "activated": "activer",
         "send": "envoyer",
+        "SEND": "envoyer",
         "name_of_channel": "Nom de la chaîne"
     },
 
