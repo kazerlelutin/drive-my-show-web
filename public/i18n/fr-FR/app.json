@@ -18,5 +18,7 @@
     "home":{
 
     },
-    "**link**": "** lien ** "
+    "**link**": "** lien ** ",
+    "SEND": "envoyer",
+    "LOADING": "Chargement..."
   }

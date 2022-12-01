@@ -1,6 +1,7 @@
 {
 
     "app": {
+
       "login_twitch": "Login with Twitch",
       "twitch_wait": "You will be redirected",
       "active_channel": "active channel",
@@ -11,11 +12,12 @@
       "delete": "delete",
       "activated":"activated",
       "send": "send",
-      "SEND": "send",
       "name_of_channel": "Name of channel"
     },
     "home":{
 
     },
-    "**link**": "** link ** "
+    "**link**": "** link ** ",
+    "SEND": "send",
+    "send": "send"
   }
