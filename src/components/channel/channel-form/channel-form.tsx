@@ -35,7 +35,7 @@ export const ChannelForm = component$(() => {
     store.loading = false
   })
 
-  const text = t(store.loading ? 'loading' : 'send')
+  const text = t(store.loading ? 'LOADING' : 'SEND')
 
   return (
     <form onSubmit$={handleSubmit} preventdefault:submit class="form">
