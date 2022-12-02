@@ -48,7 +48,7 @@ export const ChannelForm = component$(() => {
             store.value = input.value
           })}
         />
-        <Button>{t(store.loading ? 'loading' : 'send')}</Button>
+        <Button>{store.loading ? t('loading') : t('send')}</Button>
       </Col>
     </form>
   )
