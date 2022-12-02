@@ -10,6 +10,7 @@ import tmi from 'tmi.js'
 import { Button } from '~/components/ui/button/button'
 import { sessionContext } from '~/components/session/session.context'
 import { channelContext } from '~/components/contexts/channel.context'
+import { $translate as t } from 'qwik-speak'
 
 export const ChatForm = component$(() => {
   useStylesScoped$(styles)
@@ -43,7 +44,7 @@ export const ChatForm = component$(() => {
         })}
       />
       <Button variant="normal" onClick$={handleSubmit}>
-        envoyer
+        {t('send')}
       </Button>
     </div>
   )
