@@ -35,8 +35,6 @@ export const ChannelForm = component$(() => {
     store.loading = false
   })
 
-  const text = t(store.loading ? 'loading' : 'send')
-
   return (
     <form onSubmit$={handleSubmit} preventdefault:submit class="form">
       <Col smallGap>
@@ -50,8 +48,7 @@ export const ChannelForm = component$(() => {
             store.value = input.value
           })}
         />
-        {text}
-        <Button>{text}</Button>
+        <Button>{t(store.loading ? 'loading' : 'send')}</Button>
       </Col>
     </form>
   )
