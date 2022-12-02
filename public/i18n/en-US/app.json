@@ -19,5 +19,7 @@
     },
     "**link**": "** link ** ",
     "SEND": "send",
-    "send": "send"
+    "send": "send",
+    "LOADING": "Loading...",
+    "loading": "Loading..."
   }

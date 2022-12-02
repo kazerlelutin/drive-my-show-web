@@ -20,5 +20,8 @@
     },
     "**link**": "** lien ** ",
     "SEND": "envoyer",
-    "LOADING": "Chargement..."
+    "send": "envoyer",
+    "LOADING": "Chargement...",
+    "loading": "Chargement..."
+ 
   }
