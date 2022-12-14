@@ -1,5 +1,15 @@
 {
-
+  "broadcasts": "broadcasts",
+  "dashboard": "dashboard",
+  "md": {
+    "preview":"Preview",
+    "hrule":"Horizontal rule",
+    "h1":"Title level one",
+    "h2":"Title level two",
+    "bold":"Bold",
+    "italic":"Italic",
+    "help":"Help for write with Markdown"
+  },
     "app": {
 
       "login_twitch": "Login with Twitch",
@@ -12,7 +22,8 @@
       "delete": "delete",
       "activated":"activated",
       "send": "send",
-      "name_of_channel": "Name of channel"
+      "name_of_channel": "Name of channel",
+      "create_broadcast": "Create a broacast"
     },
     "home":{
 

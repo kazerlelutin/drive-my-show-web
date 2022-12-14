@@ -1,0 +1,7 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--dms-gap) / 2);
+  justify-content: flex-end;
+  width: 100%;
+}

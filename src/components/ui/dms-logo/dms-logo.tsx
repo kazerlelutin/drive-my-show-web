@@ -1,4 +1,5 @@
 import { component$, useStylesScoped$ } from '@builder.io/qwik'
+import { Link } from '@builder.io/qwik-city'
 import styles from './dms-logo.css?inline'
 
 export const DmsLogo = component$(() => {
@@ -6,7 +7,11 @@ export const DmsLogo = component$(() => {
 
   return (
     <div class="logo">
-      <a href="/">Drive My show</a>
+      <Link href="/">
+        <div  class="logoLink">
+          Drive My show
+        </div>
+      </Link>
     </div>
   )
 })

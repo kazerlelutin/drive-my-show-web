@@ -4,4 +4,5 @@
   flex-direction: column;
   gap: calc(var(--dms-gap) / 2);
   font-size: 0.8em;
+  overflow-x: hidden;
 }

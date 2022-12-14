@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
-
 :root {
   --qwik-dark-blue: #006ce9;
   --qwik-light-blue: #18b6f6;
@@ -78,6 +77,7 @@ li::marker {
 a,
 a:visited {
   color: var(--dms-highlight);
+  text-decoration: none;
 }
 
 a:hover {
@@ -114,4 +114,9 @@ input:focus {
 .emoticon {
   width: 20px;
   height: auto;
+}
+
+.small {
+  font-size: 0.7em;
+  text-transform: lowercase;
 }

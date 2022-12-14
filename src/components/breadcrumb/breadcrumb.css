@@ -1,0 +1,25 @@
+.route {
+  color: var(--dms-text);
+}
+
+.route::first-letter {
+  text-transform: uppercase;
+}
+
+.breadcrumb {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--dms-highlight);
+}
+
+.breadcrumb[data-current='false'] {
+  border-bottom: 2px solid transparent;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 3px;
+}
+
+.breadcrumb:not(.breadcrumb:last-child)::after {
+  content: '>';
+}

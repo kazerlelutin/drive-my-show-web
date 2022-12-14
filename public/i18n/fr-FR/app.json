@@ -1,5 +1,15 @@
 {
-    "flower": "fleur",
+    "broadcasts": "émissions",
+    "dashboard": "dashboard",
+    "md": {
+      "preview":"Prévisualiser",
+      "hrule":"Ligne horizontal",
+      "h1":"Titre de niveau un",
+      "h2":"Titre de niveau deux",
+      "bold":"Gras",
+      "italic":"Italique",
+      "help":"Aide pour rédiger en Markdown"
+    },
     "app": {
         "login_twitch": "Connexion avec Twitch",
         "twitch_wait": "Vous allez être redirigé",
@@ -12,7 +22,8 @@
         "activated": "activer",
         "send": "envoyer",
         "SEND": "envoyer",
-        "name_of_channel": "Nom de la chaîne"
+        "name_of_channel": "Nom de la chaîne",
+        "create_broadcast": "Créer une émission"
     },
 
     "home":{

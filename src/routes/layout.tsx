@@ -16,11 +16,9 @@ export default component$(() => {
   const sessionData = useEndpoint<{ session: Session }>()
 
   return (
-    <Resource
-      value={sessionData}
-      onPending={() => <Loading />}
-      onRejected={() => <div>Error</div>}
-      onResolved={({ session }) => (
+    <>
+      {sessionData.loading && <Loading />}
+      {sessionData.promise.then(({ session }) => (
         <SessionProvider defaultValue={session}>
           <ChannelProvider
             defaultValue={{
@@ -53,8 +51,8 @@ export default component$(() => {
             </div>
           </ChannelProvider>
         </SessionProvider>
-      )}
-    />
+      ))}
+    </>
   )
 })
 

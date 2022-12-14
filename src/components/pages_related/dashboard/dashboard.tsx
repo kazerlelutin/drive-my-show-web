@@ -3,6 +3,7 @@ import { Col } from '~/components/ui/col/col'
 import { Flex } from '~/components/ui/flex/flex'
 import styles from './dashboard.css?inline'
 import { Card } from '../../ui/card/card'
+import { Link } from '@builder.io/qwik-city'
 
 export const Dashboard = component$(() => {
   useStylesScoped$(styles)
@@ -12,6 +13,8 @@ export const Dashboard = component$(() => {
       <Col>
         <Card title="Mes dernieres emissions">
           <p>Les emissions, contenant des fils</p>
+
+          <Link href="/broadcasts">Voir tout </Link>
         </Card>
         <Card title="Mes derniers fils">
           <p>ici mes derniers fils, contenant des chroniques</p>
